@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="icon" href="rod.jpg" type="image/x-icon">
+</head>
+
+<body>
+    <div>
+        <form action="">
+            <div>
+                <label for="name">Name</label>
+                <span>* :</span>
+                <input type="text" name="name" id="name" required>
+            </div>
+
+            <div>
+                <label for="email">Email</label>
+                <span>* :</span>
+                <input type="email" name="email" id="email" required>
+            </div>
+
+            <div>
+                <label for="phone">Phone</label>
+                <span>* :</span>
+                <input type="number" name="phone" id="phone" required>
+            </div>
+
+            <div>
+                <label for="password">Password</label>
+                <span>* :</span>
+                <input type="password" name="password" id="password" required>
+            </div>
+
+            <div>
+                <label for="cpassword">Confirm Password</label>
+                <span>* :</span>
+                <input type="password" name="cpassword" id="cpassword" required>
+            </div>
+
+            <div>
+                <span>Gender *</span> :
+                <input type="radio" name="gender" id="male" value="male" required>
+                <label for="male">Male</label>
+
+                <input type="radio" name="gender" id="female" value="female">
+                <label for="female">Female</label>
+            </div>
+
+            <div>
+                <label for="country">Country</label>
+                <span>* :</span>
+                <select name="country" id="country" required>
+                    <option value="">Select</option>
+                    <option value="nepal">Nepal</option>
+                    <option value="india">India</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="state">State</label>
+                <span>* :</span>
+                <select name="state" id="state" required>
+                    <option value="">Select</option>
+                    <option value="karnataka">Karnataka</option>
+                    <option value="tamilnadu">Tamil Nadu</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="city">City</label>
+                <span>* :</span>
+                <select name="city" id="city" required>
+                    <option value="">Select</option>
+                    <option value="bangalore">Bangalore</option>
+                    <option value="mangalore">Mangalore</option>
+                </select>
+            </div>
+            <div>
+                <label for="date">date</label>
+                <span>* :</span>
+                <input type="date" name="date" id="date" required>
+                
+            </div>
+
+            <div>
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
