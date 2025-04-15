@@ -1,6 +1,12 @@
+
+nav{
+    background-color: rgb(2, 29, 29);
+    border-radius: 6px;
+    
+}
 ul{
     list-style-type: none;
-    background-color: rgb(2, 29, 29);
+    
     font-size: larger;
 }
 ul li{
@@ -41,4 +47,20 @@ li:hover{
 }
 .photo3{
     opacity: 0.3;
+}
+#searchId{
+    display: inline-block;
+    margin-left: 900px;
+
+}
+#searchId input{
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    background-image: url(pngtree-vector-search-icon-png-image_320926.jpg);
+    background-repeat: no-repeat;
+    background-position: 10px 10px;
+    background-size: 20px 20px;
+    padding-left: 40px;
 }
