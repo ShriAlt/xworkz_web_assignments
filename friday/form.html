@@ -10,21 +10,31 @@
 </head>
 
 <body>
-   
-        <form name ="formName" onsubmit="return submitForm()">
-            <div>
-                <label for="nameId">Name</label>
-                <span>* :</span>
-                <input type="text"  id="nameId" name="namename" required>
-                
-            </div>
-            <div>
-                <label for="numberId">number</label>
-                <span>* :</span>
-                <input type="number"  id="numberId" name="numbernumber" required>
-                
-            </div>
-             <div>
+
+    <form name="formName" onsubmit="return submitForm()">
+        <div>
+            <label for="nameId">Name</label>
+            <span>* :</span>
+            <input type="text" id="nameId" name="namename" required>
+
+        </div>
+        <div>
+            <label for="numberId">number</label>
+            <span>* :</span>
+            <input type="number" id="numberId" name="numbernumber" required>
+
+        </div>
+        <label for="ageId">age</label>
+        <span>* :</span>
+        <input type="number" id="ageId" name="ageage" required>
+
+        </div>
+        <div>
+            <button type="submit" value="Submit"> submit </button>
+            <button type="reset" value="Clear"> clear</button>
+        </div>
+
+        <!-- <div>
                 <label for="email">Email</label>
                 <span>* :</span>
                 <input type="email" name="emailEmail" id="emailId" required>
@@ -52,12 +62,9 @@
                 <input type="radio" name="gender" id="femaleId" value="female">
                 <label for="female">Female</label>
             </div>
-            <div>
-                <button type="submit" value="Submit"> submit </button>
-                <button type="reset" value="Clear"> clear</button>
-            </div>
+           
 
-            <!--<div>
+            <div>
                 <label for="country">Country</label>
                 <span>* :</span>
                 <select name="country" id="country" required>
@@ -96,7 +103,7 @@
             <div>
                 <button type="submit">Submit</button>
             </div> -->
-        </form>
+    </form>
 </body>
 
 </html>
