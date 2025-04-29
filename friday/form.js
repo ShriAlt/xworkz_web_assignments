@@ -1,5 +1,7 @@
 function onClick() {
-    document.getElementById('nameErrorId').innerHTML = "yo";
+    let doThis =document.getElementsByClassName('nameErrorClass')[0].innerHTML="ahhhh"  ;
+    console.log('doThis>>doThis',doThis)  
+    // document.getElementById('nameErrorId').innerHTML = "yo";
 }
 function submitForm() {
     let val = true;
