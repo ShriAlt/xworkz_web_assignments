@@ -1,25 +1,27 @@
-function onClick(a,b){
+function onClick() {
+    document.getElementById('nameErrorId').innerHTML = "yo";
 }
 function submitForm() {
     let val = true;
-    let nameInput = document.formName.namename.value;
-    let numberInput = document.formName.numbernumber.value;
-    let ageInput = document.formName.ageage.value;
-    if (nameInput.length < 3 || nameInput.length > 20) {
-        val = false;
+    let nameInput = document.formName.nameName.value;
+    let ageInput = document.formName.ageAge.value;
+    let numberInput = document.formName.numNumber.value;
 
-    }
 
-    if (nameInput.length>3 || nameInput.length <20) {
-        val=true
-    } else {
-        val=false
+if(nameInput.length<2 || nameInput.length>20){
+    val =false;
+    setError()
 
-    }
-
-    if (3<=nameInput.length<=20 && ageInput>=18 && numberInput.length == 10 ) {
-    }
-    else val=false;
-
+}
+if(ageInput<18){
+    val = false;
+}
+if(numberInput.length!=10){
+    val=false;
+}
     return val;
+}
+
+function setError(){
+
 }

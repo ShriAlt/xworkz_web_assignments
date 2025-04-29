@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="form.js"></script>
+</head>
+
+<body>
+    <span id="nameErrorId"> Please provide minimum 3 and max 20 characters</span>
+    <button onclick="onClick()"> click me</button>
+    <br>
+    <form name="formName" onsubmit="return submitForm()">
+        <div>
+
+            <label for="nameId">Name</label>
+            <span style="color:red;">*</span>
+            <span>:</span>
+            <input type="text" id="nameId" name="nameName" required>
+
+        </div>
+        <!-- <div>
+            <label for="emailId">Email</label>
+            <span style="color: red;">*</span>
+            <span>:</span>
+            <input type="email" id="emailId"name="emailEmail" required>
+        </div> -->
+        <div>
+            <label for="numberId">Number</label>
+            <span style="color:red;">*</span>
+            <span>:</span>
+            <input type="number" id="numberId" name="numNumber" required>
+        </div>
+        <div>
+            <label for="ageId">Age</label>
+            <span style="color:red;">*</span>
+            <span>:</span>
+            <input type="number" id="ageId" name="ageAge" required>
+        </div>
+        <!-- <div>
+            <label for="passwordId">Password</label>
+            <span style="color: red;">*</span>
+            <span>:</span>
+            <input type="password" id="passwordId" name="passWord" required>
+        </div>
+        <div>
+            <label for="confirmId">Confirm Password</label>
+            <span style="color: red;">*</span>
+            <span>:</span>
+            <input type="password" id="confirmId" name="confirmPass" required>
+        </div> -->
+        <div>
+            <button type="submit" value="Submit">Submit</button>
+            <button type="reset" value="Clear">Clear</button>
+        </div>
+</body>
+
+</html>
