@@ -1,7 +1,11 @@
 function onClick() {
-    let doThis =document.getElementsByClassName('nameErrorClass')[0].innerHTML="ahhhh"  ;
-    console.log('doThis>>doThis',doThis)  
-    // document.getElementById('nameErrorId').innerHTML = "yo";
+    // document.getElementsByClassName('nameErrorClass')[0].innerHTML="ahhhh";
+    // alert("hiii")
+    // document.getElementsByName('error')[0].innerHTML="hbjg";
+    // document.getElementsByTagName('span')[0].innerHTML="hiiii";
+
+    // console.log('doThis>>doThis',doThis)  
+    document.getElementById('nameErrorId').innerHTML = "yo";
 }
 function submitForm() {
     let val = true;
