@@ -1,12 +1,12 @@
-function onClick() {
-    // document.getElementsByClassName('nameErrorClass')[0].innerHTML="ahhhh";
-    // alert("hiii")
-    // document.getElementsByName('error')[0].innerHTML="hbjg";
-    // document.getElementsByTagName('span')[0].innerHTML="hiiii";
+// function onClick() {
+//     // document.getElementsByClassName('nameErrorClass')[0].innerHTML="ahhhh";
+//     // alert("hiii")
+//     // document.getElementsByName('error')[0].innerHTML="hbjg";
+//     // document.getElementsByTagName('span')[0].innerHTML="hiiii";
 
-    // console.log('doThis>>doThis',doThis)  
-    document.getElementById('nameErrorId').innerHTML = "yo";
-}
+//     // console.log('doThis>>doThis',doThis)  
+//     document.getElementById('nameErrorId').innerHTML = "yo";
+// }
 function submitForm() {
     let val = true;
     let nameInput = document.formName.nameName.value;
@@ -14,20 +14,41 @@ function submitForm() {
     let numberInput = document.formName.numNumber.value;
 
 
-if(nameInput.length<2 || nameInput.length>20){
+if(nameInput.length<3 || nameInput.length>20){
     val =false;
-    setError()
-
+    setError('nameErrorId','name should be min 3 and max 20')
+}else {
+    clearError('nameErrorId')
 }
+
 if(ageInput<18){
     val = false;
+    setError('ageErrorId','number should be 10 digits')
+}
+else{
+    clearError('ageErrorId')
 }
 if(numberInput.length!=10){
     val=false;
+    setError('numberErrorId','age should be 18+')
+}
+else{
+    clearError('numberErrorId')
 }
     return val;
 }
 
-function setError(){
+function setError(id,message){
+    console.log(id)
+    console.log(message)
+    document.getElementById(id).innerHTML = message;
 
 }
+function clearform(){
+    document.getElementsByName('formName').innerHTML='';
+
+}
+function clearError(id){
+document.getElementById(id).innerHTML='';
+}
+

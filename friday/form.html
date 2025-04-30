@@ -9,8 +9,8 @@
 </head>
 
 <body>
-    <span class="nameErrorClass" id="nameErrorId" name="error" > Please provide minimum 3 and max 20 characters</span>
-    <button onclick="onClick()"> click me</button>
+    <!-- <span class="nameErrorClass" id="nameErrorId" name="error" > Please provide minimum 3 and max 20 characters</span> -->
+    <!-- <button onclick="onClick()"> click me</button> -->
     <br>
     <form name="formName" onsubmit="return submitForm()">
         <div>
@@ -19,6 +19,7 @@
             <span style="color:red;">*</span>
             <span>:</span>
             <input type="text" id="nameId" name="nameName" required>
+            <span id="nameErrorId"></span>
 
         </div>
         <!-- <div>
@@ -32,12 +33,15 @@
             <span style="color:red;">*</span>
             <span>:</span>
             <input type="number" id="numberId" name="numNumber" required>
+            <span id="numberErrorId"></span>
+            
         </div>
         <div>
             <label for="ageId">Age</label>
             <span style="color:red;">*</span>
             <span>:</span>
             <input type="number" id="ageId" name="ageAge" required>
+            <span id="ageErrorId"></span>
         </div>
         <!-- <div>
             <label for="passwordId">Password</label>
@@ -53,7 +57,7 @@
         </div> -->
         <div>
             <button type="submit" value="Submit">Submit</button>
-            <button type="reset" value="Clear">Clear</button>
+            <button type="reset" value="Clear" onclick="clearform()">Clear</button>
         </div>
 </body>
 
