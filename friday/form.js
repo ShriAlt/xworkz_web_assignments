@@ -14,6 +14,7 @@ function submitForm() {
     let numberInput = document.formName.numNumber.value;
     let emailInput = document.formName.emailEmail.value;
     let passwordInput = document.formName.passwordPassword.value;
+    let confirmPasswordInput = document.formName.confirmPasswordPassword.value;
 
 
 if(nameInput.length<3 || nameInput.length>20){
@@ -51,6 +52,13 @@ if(passwordInput.length<8){
 }
 else{
     clearError('passwordErrorId')
+}
+if(confirmPasswordInput!=passwordInput){
+    val=false;
+    setError('confirmPasswordErrorId','password not matched')
+}
+else{
+    clearError('confirmPasswordErrorId')
 }
     return val;
 }
