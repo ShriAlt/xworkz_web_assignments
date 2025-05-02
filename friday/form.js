@@ -12,6 +12,7 @@ function submitForm() {
     let nameInput = document.formName.nameName.value;
     let ageInput = document.formName.ageAge.value;
     let numberInput = document.formName.numNumber.value;
+    let emailInput = document.formName.emailEmail.value;
 
 
 if(nameInput.length<3 || nameInput.length>20){
@@ -34,6 +35,13 @@ if(numberInput.length!=10){
 }
 else{
     clearError('numberErrorId')
+}
+if(emailInput.length<3){
+    val=false;
+    setError('emailErrorId','email should be min 3')
+}
+else{
+    clearError('emailErrorId')
 }
     return val;
 }
