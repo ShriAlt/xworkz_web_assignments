@@ -13,6 +13,7 @@ function submitForm() {
     let ageInput = document.formName.ageAge.value;
     let numberInput = document.formName.numNumber.value;
     let emailInput = document.formName.emailEmail.value;
+    let passwordInput = document.formName.passwordPassword.value;
 
 
 if(nameInput.length<3 || nameInput.length>20){
@@ -40,8 +41,16 @@ if(emailInput.length<3){
     val=false;
     setError('emailErrorId','email should be min 3')
 }
+
 else{
     clearError('emailErrorId')
+}
+if(passwordInput.length<8){
+    val=false;
+    setError('passwordErrorId','password should be min 8')
+}
+else{
+    clearError('passwordErrorId')
 }
     return val;
 }
