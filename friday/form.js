@@ -21,7 +21,7 @@ if(nameInput.length<3 || nameInput.length>20){
     val =false;
     setError('nameErrorId','name should be min 3 and max 20')
 }else {
-    clearError('nameErrorId')
+    clearAllError('nameErrorId')
 }
 
 if(ageInput<18){
@@ -29,14 +29,14 @@ if(ageInput<18){
     setError('ageErrorId','number should be 10 digits')
 }
 else{
-    clearError('ageErrorId')
+    clearAllError('ageErrorId')
 }
 if(numberInput.length!=10){
     val=false;
     setError('numberErrorId','age should be 18+')
 }
 else{
-    clearError('numberErrorId')
+    clearAllError('numberErrorId')
 }
 if(emailInput.length<3){
     val=false;
@@ -44,21 +44,21 @@ if(emailInput.length<3){
 }
 
 else{
-    clearError('emailErrorId')
+    clearAllError('emailErrorId')
 }
 if(passwordInput.length<8){
     val=false;
     setError('passwordErrorId','password should be min 8')
 }
 else{
-    clearError('passwordErrorId')
+    clearAllError('passwordErrorId')
 }
 if(confirmPasswordInput!=passwordInput){
     val=false;
     setError('confirmPasswordErrorId','password not matched')
 }
 else{
-    clearError('confirmPasswordErrorId')
+    clearAllError('confirmPasswordErrorId')
 }
     return val;
 }
@@ -73,7 +73,13 @@ function clearform(){
     document.getElementsByName('formName').innerHTML='';
 
 }
-function clearError(id){
-document.getElementById(id).innerHTML='';
+function clearAllError(){
+    document.getElementById('nameErrorId').innerHTML='';
+    document.getElementById('ageErrorId').innerHTML='';
+    document.getElementById('numberErrorId').innerHTML='';
+    document.getElementById('emailErrorId').innerHTML='';
+    document.getElementById('passwordErrorId').innerHTML='';
+    document.getElementById('confirmPasswordErrorId').innerHTML='';
+
 }
 
