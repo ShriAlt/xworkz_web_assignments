@@ -45,3 +45,11 @@ function clearError(id){
     document.getElementById(id).innerHTML = '';
 
 }
+function submitForm() {
+    if(validate()){
+        alert("Form submitted successfully!");
+    }
+    else{
+        alert("Please correct the errors in the form.");
+    }
+}
