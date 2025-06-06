@@ -1,33 +1,47 @@
-function functionClick(){
-    let fullname='harsha';
-    console.log(fullname);
-    console.log(lastname)
-    let lastname='km'
+function validate(){
+    let val=true;
+    let name = document.PracticeForm.name.value;
+    let email = document.PracticeForm.email.value;
+    let phone = document.PracticeForm.phone.value;
+    let password = document.PracticeForm.password.value;
+    let confirmPassword = document.PracticeForm.confirmPassword.value;
+
+
+    if(name.length <2 || name.length > 20){
+        setError("nameErrorId", "Name must be between 2 and 20 characters.");
+        val = false;
+    }
+    else clearError("nameErrorId");
+     if(!email.includes("@") || !email.includes(".")){
+        setError("emailErrorId", "Email must contain '@' and '.'");
+        val = false;
+    }
+    else clearError("emailErrorId");
+     if(phone.length !== 10){
+        setError("phoneErrorId", "Phone number must be a 10-digit number");
+        val = false;
+    }
+    else clearError("phoneErrorId");
+     if(password.length < 6 || password.length > 20){
+        setError("passwordErrorId", "Password must be between 6 and 20 characters.");
+        val = false;
+    }
+    else clearError("passwordErrorId");
+     if(password !== confirmPassword){
+        val = false;
+        setError("confirmPasswordErrorId", "Password must match.");
+    }
+    else clearError("confirmPasswordErrorId");
+    return val;
+
 }
 
-
-let emp = new Object();
-emp.id=1;
-emp.salary=1999;
-emp.name='harsha';
-
-function emp2(id,empName,salary){
-    this.id=id;
-    this.empName=empName;
-    this.salary=salary;
+function setError(id, error){
+    document.getElementById(id).innerHTML = error;
 
 }
 
-function empFunction(){
-    console.log(emp);
-}
-function harsha(){
-    let pvalue=document.getElementsByTagName('p')[0].innerHTML;
-    let nameValue=document.getElementsByName('para')[0].innerHTML;
-    let classValue=document.getElementsByClassName('para')[0].innerHTML;
-    let idValue=document.getElementById('para').innerHTML;
-    console.log(pvalue);
-    console.log(nameValue);
-    console.log(idValue);
-    console.log(classValue);
+function clearError(id){
+    document.getElementById(id).innerHTML = '';
+
 }

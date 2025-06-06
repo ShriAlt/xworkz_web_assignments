@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Form</title>
+    <style>
+        span {
+            color: red;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <form action="" name="PracticeForm" onsubmit="return validate()">
+        <div>
+            <label for="name">Name <span style="color: red">*</span> :<label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            <span id="nameErrorId"></span>
+        </div><br>
+        <div>
+            <label for="email">Email <span style="color: red">*</span> :<label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            <span id="emailErrorId"></span>
+        </div><br>
+        <div>
+            <label for="phone">Phone <span style="color: red">*</span> :<label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required >
+            <span id="phoneErrorId"></span>
+        </div><br>
+        <div>
+            <label name="gender">Gender <span style="color: red;">*</span></label><br>
+            
+            <input type="radio" id="male" name="gender" value="Male" required>
+            <label for="male">Male</label>
+            
+            <input type="radio" id="female" name="gender" value="Female">
+            <label for="female">Female</label>
+            
+            <input type="radio" id="other" name="gender" value="Other">
+            <label for="other">Other</label>
+          </div>
+          
+        <div>
+            <label for="password">Password <span style="color: red">*</span> :<label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            <span id="passwordErrorId"></span>
+        </div><br>
+        <div>
+            <label for="confirmPassword">Confirm Password <span style="color: red">*</span> :</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password" required>
+            <span id="confirmPasswordErrorId"></span>
+        </div><br>
+
+
+        <button type="submit">Submit</button><br><br>
+        <button type="reset" onclick="clearError()">Clear</button>
+
+    </form>
+    <script src="form.js"></script>
+</body>
+</html>
