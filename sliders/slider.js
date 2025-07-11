@@ -13,6 +13,7 @@ var swiper = new Swiper(".swiper", {
       depth: 100,
       modifier: 3,
       slideShadows: true
+
     },
     keyboard: {
       enabled: true
